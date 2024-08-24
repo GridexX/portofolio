@@ -47,7 +47,7 @@ const StyledCredit = styled.div`
   line-height: 1;
 
   a {
-    padding: 10px;
+    padding: 5px 0;
   }
 
   .github-stats {
@@ -69,15 +69,15 @@ const StyledCredit = styled.div`
 
 const Footer = () => {
   const [githubInfo, setGitHubInfo] = useState({
-    stars: null,
-    forks: null,
+    stars: 0,
+    forks: 0,
   });
 
   useEffect(() => {
-    if (process.env.NODE_ENV !== 'production') {
-      return;
-    }
-    fetch('https://api.github.com/repos/bchiang7/v4')
+    // if (process.env.NODE_ENV !== 'production') {
+    //   return;
+    // }
+    fetch('https://api.github.com/repos/gridexx/portofolio')
       .then(response => response.json())
       .then(json => {
         const { stargazers_count, forks_count } = json;
@@ -105,22 +105,26 @@ const Footer = () => {
       </StyledSocialLinks>
 
       <StyledCredit tabindex="-1">
-        <a href="https://github.com/bchiang7/v4">
-          <div>Designed &amp; Built by Brittany Chiang</div>
-
-          {githubInfo.stars && githubInfo.forks && (
-            <div className="github-stats">
-              <span>
-                <Icon name="Star" />
-                <span>{githubInfo.stars.toLocaleString()}</span>
-              </span>
-              <span>
-                <Icon name="Fork" />
-                <span>{githubInfo.forks.toLocaleString()}</span>
-              </span>
-            </div>
-          )}
+        <a href="https://github.com/gridexx/protofolio">
+          <div>Re-Designed &amp; Built by Arsène Fougerouse</div>
         </a>
+        <div>
+          <small>
+            Forked from <a href="https://v4.brittanychiang.com">brittanychiang.com</a>
+          </small>
+        </div>
+        {!isNaN(githubInfo?.stars ?? 0) && !isNaN(githubInfo?.forks ?? 0) && (
+          <div className="github-stats">
+            <span>
+              <Icon name="Star" />
+              <span>{githubInfo?.stars?.toLocaleString() ?? 0}</span>
+            </span>
+            <span>
+              <Icon name="Fork" />
+              <span>{githubInfo?.forks.toLocaleString() ?? 0}</span>
+            </span>
+          </div>
+        )}
       </StyledCredit>
     </StyledFooter>
   );

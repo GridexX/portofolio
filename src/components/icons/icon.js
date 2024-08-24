@@ -16,6 +16,14 @@ import {
   IconStar,
   IconTwitter,
 } from '@components/icons';
+import IconTypescript from './typescript';
+import IconTerraform from './terraform';
+import IconOpenstack from './openstack';
+import IconAws from './aws';
+import IconGo from './go';
+import IconReact from './react';
+import IconKubernetes from './kubernetes';
+import IconShop from './shop';
 
 const Icon = ({ name }) => {
   switch (name) {
@@ -29,6 +37,22 @@ const Icon = ({ name }) => {
       return <IconExternal />;
     case 'Folder':
       return <IconFolder />;
+    case 'Shop':
+      return <IconShop />;
+    case 'TypeScript':
+      return <IconTypescript />;
+    case 'Terraform':
+      return <IconTerraform />;
+    case 'Openstack':
+      return <IconOpenstack />;
+    case 'React':
+      return <IconReact />;
+    case 'Kubernetes':
+      return <IconKubernetes />;
+    case 'Go':
+      return <IconGo />;
+    case 'Aws':
+      return <IconAws />;
     case 'Fork':
       return <IconFork />;
     case 'GitHub':

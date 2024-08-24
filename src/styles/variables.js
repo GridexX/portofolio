@@ -2,33 +2,32 @@ import { css } from 'styled-components';
 
 const variables = css`
   :root {
-    --dark-navy: #020c1b;
-    --navy: #0a192f;
-    --light-navy: #112240;
+    --dark-navy: #272831;
+    --navy: #23232c;
+    --light-navy: #272831;
     --lightest-navy: #233554;
-    --navy-shadow: rgba(2, 12, 27, 0.7);
-    --dark-slate: #495670;
-    --slate: #8892b0;
-    --light-slate: #a8b2d1;
-    --lightest-slate: #ccd6f6;
+    --navy-shadow: rgba(23, 23, 30, 0.7);
+    --dark-slate: #495060;
+    --slate: #a1a2af;
+    --light-slate: #a8b2c1;
+    --lightest-slate: #ececf1;
     --white: #e6f1ff;
-    --green: #64ffda;
-    --green-tint: rgba(100, 255, 218, 0.1);
-    --pink: #f57dff;
-    --blue: #57cbff;
+    --green: #ef961a;
 
+    --font-title: 'Paytone One';
+    --font-texts: 'Cambay';
     --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui,
       sans-serif;
-    --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+    --font-mono: 'Raleway', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
 
-    --fz-xxs: 12px;
-    --fz-xs: 13px;
-    --fz-sm: 14px;
-    --fz-md: 16px;
+    --fz-xxs: 14px;
+    --fz-xs: 18px;
+    --fz-sm: 16px;
+    --fz-md: 20px;
     --fz-lg: 18px;
     --fz-xl: 20px;
-    --fz-xxl: 22px;
-    --fz-heading: 32px;
+    --fz-xxl: 24px;
+    --fz-heading: 30px;
 
     --border-radius: 4px;
     --nav-height: 100px;
@@ -38,7 +37,7 @@ const variables = css`
     --tab-width: 120px;
 
     --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
-    --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    --transition: all 0.35s cubic-bezier(0, 0.07, 0.13, 1.16);
 
     --hamburger-width: 30px;
 

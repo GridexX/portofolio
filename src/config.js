@@ -1,26 +1,26 @@
 module.exports = {
-  email: 'brittany.chiang@gmail.com',
+  email: 'arsene582@gmail.com',
 
   socialMedia: [
     {
       name: 'GitHub',
-      url: 'https://github.com/bchiang7',
+      url: 'https://github.com/gridexx',
     },
     {
       name: 'Instagram',
-      url: 'https://www.instagram.com/bchiang7',
+      url: 'https://www.instagram.com/arsene.fgr',
     },
     {
       name: 'Twitter',
-      url: 'https://twitter.com/bchiang7',
+      url: 'https://twitter.com/gridexx',
     },
     {
       name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/bchiang7',
+      url: 'https://www.linkedin.com/in/arsène-fougerouse-6a65a01b6',
     },
     {
       name: 'Codepen',
-      url: 'https://codepen.io/bchiang7',
+      url: 'https://gridexx.github.io/open-sources-contribution/contributions/',
     },
   ],
 
@@ -30,12 +30,16 @@ module.exports = {
       url: '/#about',
     },
     {
-      name: 'Experience',
-      url: '/#jobs',
+      name: 'Skills',
+      url: '/#skills',
     },
     {
-      name: 'Work',
+      name: 'Projects',
       url: '/#projects',
+    },
+    {
+      name: 'Experience',
+      url: '/#jobs',
     },
     {
       name: 'Contact',
@@ -44,7 +48,7 @@ module.exports = {
   ],
 
   colors: {
-    green: '#64ffda',
+    green: '#ef961a',
     navy: '#0a192f',
     darkNavy: '#020c1b',
   },

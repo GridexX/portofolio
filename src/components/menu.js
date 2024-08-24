@@ -28,7 +28,7 @@ const StyledHamburgerButton = styled.button`
     color: inherit;
     text-transform: none;
     transition-timing-function: linear;
-    transition-duration: 0.15s;
+    transition-duration: 0.1s;
     transition-property: opacity, filter;
   }
 
@@ -47,7 +47,7 @@ const StyledHamburgerButton = styled.button`
     height: 2px;
     border-radius: var(--border-radius);
     background-color: var(--green);
-    transition-duration: 0.22s;
+    transition-duration: 1.22s;
     transition-property: transform;
     transition-delay: ${props => (props.menuOpen ? `0.12s` : `0s`)};
     transform: rotate(${props => (props.menuOpen ? `225deg` : `0deg`)});

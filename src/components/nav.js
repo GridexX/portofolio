@@ -17,7 +17,7 @@ const StyledHeader = styled.header`
   padding: 0px 50px;
   width: 100%;
   height: var(--nav-height);
-  background-color: rgba(10, 25, 47, 0.85);
+  background-color: var(--navy-shadow);
   filter: none !important;
   pointer-events: auto !important;
   user-select: auto !important;
@@ -38,7 +38,7 @@ const StyledHeader = styled.header`
       css`
         height: var(--nav-scroll-height);
         transform: translateY(0px);
-        background-color: rgba(10, 25, 47, 0.85);
+        background-color: var(--navy-shadow);
         box-shadow: 0 10px 30px -10px var(--navy-shadow);
       `};
 
@@ -56,6 +56,8 @@ const StyledHeader = styled.header`
 const StyledNav = styled.nav`
   ${({ theme }) => theme.mixins.flexBetween};
   position: relative;
+  display: flex;
+  flex-direction: row;
   width: 100%;
   color: var(--lightest-slate);
   font-family: var(--font-mono);
@@ -67,8 +69,8 @@ const StyledNav = styled.nav`
 
     a {
       color: var(--green);
-      width: 42px;
-      height: 42px;
+      width: 60px;
+      height: max-content;
       position: relative;
       z-index: 1;
 
@@ -91,7 +93,7 @@ const StyledNav = styled.nav`
           @media (prefers-reduced-motion: no-preference) {
             transition: var(--transition);
           }
-          polygon {
+          circle {
             fill: var(--navy);
           }
         }

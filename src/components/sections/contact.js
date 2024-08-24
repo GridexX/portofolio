@@ -32,7 +32,8 @@ const StyledContactSection = styled.section`
   }
 
   .title {
-    font-size: clamp(40px, 5vw, 60px);
+    font-size: clamp(40px, 5vw, 50px);
+    font-family: var(--font-title);
   }
 
   .email-link {
@@ -60,12 +61,12 @@ const Contact = () => {
       <h2 className="title">Get In Touch</h2>
 
       <p>
-        Although I’m not currently looking for any new opportunities, my inbox is always open.
-        Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+        I’m currently looking for new opportunities, my inbox is always open. Don't hesitate to
+        contact me!
       </p>
 
       <a className="email-link" href={`mailto:${email}`}>
-        Say Hello
+        Email me
       </a>
     </StyledContactSection>
   );

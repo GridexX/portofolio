@@ -5,13 +5,16 @@ const IconHex = () => (
     <title>Hexagon</title>
     <g transform="translate(-8.000000, -2.000000)">
       <g transform="translate(11.000000, 5.000000)">
-        <polygon
+        <circle
+          cx="38"
+          cy="46"
+          r="36"
+          strokeWidth="3"
+          id="Shape"
           stroke="currentColor"
-          strokeWidth="5"
+          fill="none"
           strokeLinecap="round"
           strokeLinejoin="round"
-          points="39 0 0 22 0 67 39 90 78 68 78 23"
-          fill="currentColor"
         />
       </g>
     </g>

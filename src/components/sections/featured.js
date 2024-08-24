@@ -161,6 +161,10 @@ const StyledProject = styled.li`
     color: var(--light-slate);
     font-size: var(--fz-lg);
 
+    &:hover {
+      scale: 1.03;
+    }
+
     @media (max-width: 768px) {
       padding: 20px 0;
       background-color: transparent;
@@ -191,8 +195,11 @@ const StyledProject = styled.li`
     list-style: none;
 
     li {
-      margin: 0 20px 5px 0;
+      margin: 0 14px 5px 0;
       color: var(--light-slate);
+      background-color: var(--navy);
+      border-radius: var(--border-radius);
+      padding: 7px 14px;
       font-family: var(--font-mono);
       font-size: var(--fz-xs);
       white-space: nowrap;
@@ -290,7 +297,7 @@ const StyledProject = styled.li`
 
     .img {
       border-radius: var(--border-radius);
-      mix-blend-mode: multiply;
+      mix-blend-mode: soft-light;
       filter: grayscale(100%) contrast(1) brightness(90%);
 
       @media (max-width: 768px) {

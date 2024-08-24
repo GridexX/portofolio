@@ -33,16 +33,55 @@ const StyledHeroSection = styled.section`
     margin-top: 5px;
     color: var(--slate);
     line-height: 0.9;
+    font-family: var(--font-title);
   }
 
-  p {
-    margin: 20px 0 0;
-    max-width: 540px;
+  h2 {
+    font-family: var(--font-title);
   }
 
   .email-link {
     ${({ theme }) => theme.mixins.bigButton};
     margin-top: 50px;
+  }
+
+  #aka {
+    font-family: var(--font-title);
+    font-size: clamp(var(--fz-heading), 5vw, 60px);
+  }
+
+  #X {
+    position: relative;
+    bottom: -5px;
+  }
+
+  #G {
+    position: relative;
+    top: -5px;
+  }
+
+  .div-two {
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 1rem;
+  }
+
+  #name {
+    color: var(--green);
+  }
+
+  .hero-p {
+    @media (max-width: 700px) {
+      width: 90%;
+    }
+
+    width: 70vw;
+    max-width: 900px;
+  }
+
+  p {
+    margin: 20px 0 0;
+    width: 100%;
   }
 `;
 
@@ -60,28 +99,37 @@ const Hero = () => {
   }, []);
 
   const one = <h1>Hi, my name is</h1>;
-  const two = <h2 className="big-heading">Brittany Chiang.</h2>;
-  const three = <h3 className="big-heading">I build things for the web.</h3>;
+  const two = (
+    <div className="div-two">
+      <h2 className="big-heading">Arsène</h2>
+      <div>
+        <h2 className="big-heading">
+          aka
+          <span id="name">
+            {' '}
+            <span id="G">G</span>ride<span id="X">X</span>X.
+          </span>
+        </h2>
+      </div>
+    </div>
+  );
+  const three = <h3 className="big-heading">I build things for the Cloud.</h3>;
   const four = (
-    <>
+    <div className="hero-p">
       <p>
-        I’m a software engineer specializing in building (and occasionally designing) exceptional
-        digital experiences. Currently, I’m focused on building accessible, human-centered products
-        at{' '}
-        <a href="https://upstatement.com/" target="_blank" rel="noreferrer">
-          Upstatement
-        </a>
-        .
+        I'm a DevOps engineer with a passion for architecting robust, scalable, and efficient cloud
+        solutions.
       </p>
-    </>
+      <p>
+        Currently, I'm focused on improving scientific computing infrastructure at{' '}
+        <a href="https://isdm.umontpellier.fr"> Montpellier University</a>, where I'm bridging the
+        gap between cutting-edge research and state-of-the-art cloud technologies.
+      </p>
+    </div>
   );
   const five = (
-    <a
-      className="email-link"
-      href="https://www.newline.co/courses/build-a-spotify-connected-app"
-      target="_blank"
-      rel="noreferrer">
-      Check out my course!
+    <a className="email-link" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+      Check out my Resume!
     </a>
   );
 

@@ -163,15 +163,17 @@ const GlobalStyle = createGlobalStyle`
   h4,
   h5,
   h6 {
-    margin: 0 0 10px 0;
+    margin: 0 0 25px 0;
     font-weight: 600;
+    font-size: math;
     color: var(--lightest-slate);
     line-height: 1.1;
   }
 
   .big-heading {
     margin: 0;
-    font-size: clamp(40px, 8vw, 80px);
+    margin-bottom: .5rem;
+    font-size: clamp(40px, 7vw, 70px);
   }
 
   .medium-heading {
@@ -190,13 +192,13 @@ const GlobalStyle = createGlobalStyle`
 
     &:before {
       position: relative;
-      bottom: 4px;
+      bottom: 5px;
       counter-increment: section;
       content: '0' counter(section) '.';
       margin-right: 10px;
       color: var(--green);
       font-family: var(--font-mono);
-      font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
+      font-size: clamp(var(--fz-md), 3vw, var(--fz-heading));
       font-weight: 400;
 
       @media (max-width: 480px) {
@@ -209,7 +211,7 @@ const GlobalStyle = createGlobalStyle`
       content: '';
       display: block;
       position: relative;
-      top: -5px;
+      top: 3px;
       width: 300px;
       height: 1px;
       margin-left: 20px;
@@ -292,7 +294,7 @@ const GlobalStyle = createGlobalStyle`
 
   p {
     margin: 0 0 15px 0;
-
+    font-family: var(--font-texts);
     &:last-child,
     &:last-of-type {
       margin: 0;

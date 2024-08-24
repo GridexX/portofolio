@@ -182,6 +182,7 @@ const Projects = () => {
               tech
               github
               external
+              icon
             }
             html
           }
@@ -213,14 +214,14 @@ const Projects = () => {
 
   const projectInner = node => {
     const { frontmatter, html } = node;
-    const { github, external, title, tech } = frontmatter;
+    const { github, external, title, tech, icon } = frontmatter;
 
     return (
       <div className="project-inner">
         <header>
           <div className="project-top">
             <div className="folder">
-              <Icon name="Folder" />
+              <Icon name={icon ?? 'Folder'} />
             </div>
             <div className="project-links">
               {github && (
