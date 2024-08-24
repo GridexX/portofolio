@@ -27,7 +27,7 @@ const StyledHeader = styled.header`
   @media (max-width: 1080px) {
     padding: 0 40px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 810px) {
     padding: 0 25px;
   }
 
@@ -115,7 +115,7 @@ const StyledLinks = styled.div`
   display: flex;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 810px) {
     display: none;
   }
 

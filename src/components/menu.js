@@ -9,7 +9,7 @@ import { useOnClickOutside } from '@hooks';
 const StyledMenu = styled.div`
   display: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 810px) {
     display: block;
   }
 `;
@@ -17,7 +17,7 @@ const StyledMenu = styled.div`
 const StyledHamburgerButton = styled.button`
   display: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 810px) {
     ${({ theme }) => theme.mixins.flexCenter};
     position: relative;
     z-index: 10;
@@ -88,7 +88,7 @@ const StyledHamburgerButton = styled.button`
 const StyledSidebar = styled.aside`
   display: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 810px) {
     ${({ theme }) => theme.mixins.flexCenter};
     position: fixed;
     top: 0;
@@ -266,7 +266,7 @@ const Menu = () => {
               </ol>
             )}
 
-            <a href="/resume.pdf" className="resume-link">
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-link">
               Resume
             </a>
           </nav>

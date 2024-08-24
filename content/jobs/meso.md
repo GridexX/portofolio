@@ -1,7 +1,7 @@
 ---
 date: '2023-10-01'
 title: 'DevOps Engineer'
-company: 'Montpellier University'
+company: 'Meso'
 location: 'Montpellier, France'
 range: 'October 2023 - October 2024'
 url: 'https://isdm.umontpellier.fr/'

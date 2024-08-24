@@ -34,7 +34,7 @@ const variables = css`
     --nav-scroll-height: 70px;
 
     --tab-height: 42px;
-    --tab-width: 120px;
+    --tab-width: 28vw;
 
     --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
     --transition: all 0.35s cubic-bezier(0, 0.07, 0.13, 1.16);
