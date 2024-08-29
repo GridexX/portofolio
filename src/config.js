@@ -7,14 +7,6 @@ module.exports = {
       url: 'https://github.com/gridexx',
     },
     {
-      name: 'Instagram',
-      url: 'https://www.instagram.com/arsene.fgr',
-    },
-    {
-      name: 'Twitter',
-      url: 'https://twitter.com/gridexx',
-    },
-    {
       name: 'Linkedin',
       url: 'https://www.linkedin.com/in/arsène-fougerouse-6a65a01b6',
     },
