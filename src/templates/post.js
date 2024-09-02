@@ -7,17 +7,46 @@ import styled from 'styled-components';
 import { Layout } from '@components';
 
 const StyledPostContainer = styled.main`
-  max-width: 1000px;
+  max-width: 1500px;
 `;
 const StyledPostHeader = styled.header`
   margin-bottom: 50px;
   .tag {
-    margin-right: 10px;
+    color: white;
+  }
+
+  .project-tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin: 0 7px 7px 0;
+      color: var(--light-slate);
+      background-color: var(--dark-navy);
+      border-radius: 1rem;
+      padding: 7px 10px;
+      font-family: var(--font-mono);
+      font-size: var(--fz-xxs);
+      white-space: nowrap;
+    }
+
+    @media (max-width: 768px) {
+      margin: 10px 0;
+
+      li {
+        margin: 0 3px 1px 0;
+        color: var(--lightest-slate);
+      }
+    }
   }
 `;
 const StyledPostContent = styled.div`
   margin-bottom: 100px;
-  h1,
   h2,
   h3,
   h4,
@@ -66,22 +95,28 @@ const PostTemplate = ({ data, location }) => {
 
         <StyledPostHeader>
           <h1 className="medium-heading">{title}</h1>
+          <time className="range">
+            {new Date(date).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}
+          </time>
           <p className="subtitle">
-            <time>
-              {new Date(date).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-              })}
-            </time>
-            <span>&nbsp;&mdash;&nbsp;</span>
-            {tags &&
-              tags.length > 0 &&
-              tags.map((tag, i) => (
-                <Link key={i} to={`/pensieve/tags/${kebabCase(tag)}/`} className="tag">
-                  #{tag}
-                </Link>
-              ))}
+            {tags && tags.length > 0 && (
+              <ul className="project-tech-list">
+                {tags.map((tag, i) => (
+                  <li key={`${tag}-${i}`}>
+                    <Link
+                      key={`${tag}-${i}`}
+                      to={`/pensieve/tags/${kebabCase(tag)}/`}
+                      className="tag">
+                      {tag}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
           </p>
         </StyledPostHeader>
 

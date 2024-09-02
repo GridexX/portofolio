@@ -5,7 +5,7 @@ const variables = css`
     --dark-navy: #272831;
     --navy: #23232c;
     --light-navy: #272831;
-    --lightest-navy: #233554;
+    --lightest-navy: #a8b2c1;
     --navy-shadow: rgba(23, 23, 30, 0.7);
     --dark-slate: #495060;
     --slate: #a1a2af;
@@ -18,6 +18,7 @@ const variables = css`
     --font-texts: 'Cambay';
     --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui,
       sans-serif;
+    --font-code: 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
     --font-mono: 'Raleway', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
 
     --fz-xxs: 14px;

@@ -358,7 +358,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   code {
-    font-family: var(--font-mono);
+    font-family: var(--font-code);
     font-size: var(--fz-md);
   }
 
@@ -439,6 +439,13 @@ const GlobalStyle = createGlobalStyle`
       text-transform: uppercase;
       letter-spacing: 0.1em;
     }
+  }
+
+  .range {
+    margin: 0;
+    color: var(--light-slate);
+    font-family: var(--font-mono);
+    font-size: var(--fz-xs);
   }
 
   .gatsby-image-outer-wrapper {

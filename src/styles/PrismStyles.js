@@ -1,7 +1,7 @@
 import { css } from 'styled-components';
 
 const prismColors = {
-  bg: `#112340`,
+  bg: `#272831`,
   lineHighlight: `#1d2d50`,
   blue: `#5ccfe6`,
   purple: `#c3a6ff`,
@@ -28,8 +28,9 @@ const PrismStyles = css`
     padding: 1.25em;
     overflow: auto;
     position: relative;
-    font-family: var(--font-mono);
+    font-family: var(--font-code);
     font-size: var(--fz-md);
+    box-shadow: -10px 0px 30px -15px var(--navy-shadow);
   }
 
   .gatsby-highlight code[class*='language-'],
@@ -65,7 +66,7 @@ const PrismStyles = css`
   /* File names */
   .gatsby-code-title {
     padding: 1em 1.5em;
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-size: var(--fz-xs);
     background-color: ${prismColors.bg};
     color: ${prismColors.grey};
@@ -96,7 +97,7 @@ const PrismStyles = css`
     background: var(--lightest-navy);
     color: var(--white);
     font-size: var(--fz-xxs);
-    font-family: var(--font-mono);
+    font-family: var(--font-code);
     line-height: 1.5;
     letter-spacing: 0.1em;
     text-transform: uppercase;

@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import { Layout } from '@components';
 
 const StyledTagsContainer = styled.main`
-  max-width: 1000px;
+  max-width: 1500px;
 
   h1 {
     margin-bottom: 50px;
@@ -41,10 +41,10 @@ const TagsPage = ({
     <Helmet title="Tags" />
 
     <StyledTagsContainer>
-      <span className="breadcrumb">
+      <Link to="/pensieve" className="breadcrumb">
         <span className="arrow">&larr;</span>
         <Link to="/pensieve">All memories</Link>
-      </span>
+      </Link>
 
       <h1>Tags</h1>
       <ul className="fancy-list">

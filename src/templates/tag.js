@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import { Layout } from '@components';
 
 const StyledTagsContainer = styled.main`
-  max-width: 1000px;
+  max-width: 1500px;
 
   a {
     ${({ theme }) => theme.mixins.inlineLink};
@@ -54,10 +54,10 @@ const TagTemplate = ({ pageContext, data, location }) => {
       <Helmet title={`Tagged: #${tag}`} />
 
       <StyledTagsContainer>
-        <span className="breadcrumb">
+        <Link to="/pensieve" className="breadcrumb">
           <span className="arrow">&larr;</span>
           <Link to="/pensieve">All memories</Link>
-        </span>
+        </Link>
 
         <h1>
           <span>#{tag}</span>
