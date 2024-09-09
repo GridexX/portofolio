@@ -82,7 +82,6 @@ const StyledPostContent = styled.div`
 const PostTemplate = ({ data, location }) => {
   const { frontmatter, html } = data.markdownRemark;
   const { title, date, tags } = frontmatter;
-
   return (
     <Layout location={location}>
       <Helmet title={title} />

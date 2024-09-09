@@ -8,14 +8,14 @@ const IconLogo = () => (
         <circle
           cx="38"
           cy="46"
-          r="36"
+          r="30"
           strokeWidth="3"
           id="Shape"
           stroke="currentColor"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
-        <g transform="translate(22, 28) scale(0.5)">
+        <g transform="translate(24, 30) scale(0.4)">
           <path
             id="G"
             fill="currentColor"

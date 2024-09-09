@@ -89,7 +89,7 @@ const StyledPost = styled.li`
   }
 
   .post__title {
-    margin: 0 0 10px;
+    margin: 0;
     color: var(--lightest-slate);
     font-size: var(--fz-xxl);
 
@@ -140,10 +140,26 @@ const StyledPost = styled.li`
       }
     }
   }
+
+  .post__reading {
+    margin-bottom: 20px;
+    font-family: var(--font-mono);
+    font-style: italic;
+    font-size: var(--fz-xxs);
+  }
 `;
 
 const PensievePage = ({ location, data }) => {
   const posts = data.allMarkdownRemark.edges;
+
+  const strip = html => new DOMParser().parseFromString(html, 'text/html')?.body?.textContent || '';
+
+  const getReadingTime = html => {
+    const stripped = strip(html);
+    const wordsPerMinute = 200;
+    const minutes = Math.ceil(stripped.split(' ').length / wordsPerMinute);
+    return `${minutes} min${minutes > 1 ? 's' : ''} read`;
+  };
 
   return (
     <Layout location={location}>
@@ -162,7 +178,7 @@ const PensievePage = ({ location, data }) => {
         <StyledGrid>
           {posts.length > 0 &&
             posts.map(({ node }, i) => {
-              const { frontmatter } = node;
+              const { frontmatter, html } = node;
               const { title, description, slug, date, tags } = frontmatter;
               const formattedDate = new Date(date).toLocaleDateString();
 
@@ -176,6 +192,7 @@ const PensievePage = ({ location, data }) => {
                       <h5 className="post__title">
                         <Link to={slug}>{title}</Link>
                       </h5>
+                      <p className="post__reading">{getReadingTime(html)}</p>
                       <p className="post__desc">{description}</p>
                     </header>
 
@@ -211,7 +228,10 @@ export default PensievePage;
 export const pageQuery = graphql`
   {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/content/posts/" }, frontmatter: { draft: { ne: true } } }
+      filter: {
+        fileAbsolutePath: { regex: "/content/posts/" }
+        frontmatter: { draft: { ne: true } }
+      }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {

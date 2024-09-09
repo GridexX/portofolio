@@ -8,7 +8,7 @@ const IconHex = () => (
         <circle
           cx="38"
           cy="46"
-          r="36"
+          r="30"
           strokeWidth="3"
           id="Shape"
           stroke="currentColor"
