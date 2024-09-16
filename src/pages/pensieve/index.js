@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { Layout } from '@components';
 import { IconBookmark } from '@components/icons';
+import { getReadingTime } from '../../utils';
 
 const StyledMainContainer = styled.main`
   & > header {
@@ -151,15 +152,6 @@ const StyledPost = styled.li`
 
 const PensievePage = ({ location, data }) => {
   const posts = data.allMarkdownRemark.edges;
-
-  const strip = html => new DOMParser().parseFromString(html, 'text/html')?.body?.textContent || '';
-
-  const getReadingTime = html => {
-    const stripped = strip(html);
-    const wordsPerMinute = 200;
-    const minutes = Math.ceil(stripped.split(' ').length / wordsPerMinute);
-    return `${minutes} min${minutes > 1 ? 's' : ''} read`;
-  };
 
   return (
     <Layout location={location}>

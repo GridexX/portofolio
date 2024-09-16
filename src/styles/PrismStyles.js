@@ -9,7 +9,7 @@ const prismColors = {
   yellow: `#ffd580`,
   orange: `#ffae57`,
   red: `#ef6b73`,
-  grey: `#a2aabc`,
+  grey: `#a1a2af`,
   comment: `#8695b799`,
 };
 
@@ -22,7 +22,7 @@ const PrismStyles = css`
   */
   .gatsby-highlight {
     background-color: ${prismColors.bg};
-    color: ${prismColors.grey};
+    color: red ${prismColors.grey};
     border-radius: var(--border-radius);
     margin: 2em 0;
     padding: 1.25em;
@@ -94,7 +94,7 @@ const PrismStyles = css`
 
   /* Language badges */
   .gatsby-highlight pre[class*='language-']::before {
-    background: var(--lightest-navy);
+    background: var(--dark-slate);
     color: var(--white);
     font-size: var(--fz-xxs);
     font-family: var(--font-code);

@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { Layout } from '@components';
+import { getReadingTime } from '../utils';
 
 const StyledPostContainer = styled.main`
   max-width: 1500px;
@@ -44,6 +45,13 @@ const StyledPostHeader = styled.header`
       }
     }
   }
+
+  .reading-time {
+    margin-bottom: 20px;
+    font-family: var(--font-mono);
+    font-style: italic;
+    font-size: var(--fz-sm);
+  }
 `;
 const StyledPostContent = styled.div`
   margin-bottom: 100px;
@@ -66,7 +74,7 @@ const StyledPostContent = styled.div`
   }
 
   code {
-    background-color: var(--lightest-navy);
+    background-color: var(--dark-slate);
     color: var(--lightest-slate);
     border-radius: var(--border-radius);
     font-size: var(--fz-sm);
@@ -101,6 +109,7 @@ const PostTemplate = ({ data, location }) => {
               day: 'numeric',
             })}
           </time>
+          <p className="reading-time">{getReadingTime(html)}</p>
           <p className="subtitle">
             {tags && tags.length > 0 && (
               <ul className="project-tech-list">
