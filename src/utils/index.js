@@ -23,10 +23,8 @@ export const KEY_CODES = {
   ENTER: 'Enter',
 };
 
-const strip = html => new DOMParser().parseFromString(html, 'text/html')?.body?.textContent || '';
-
 export const getReadingTime = html => {
-  const stripped = strip(html);
+  const stripped = html.match(/<(.|\n)*?>/g).reduce((acc, cur) => acc.replace(cur, ''), html);
   const wordsPerMinute = 200;
   const minutes = Math.ceil(stripped.split(' ').length / wordsPerMinute);
   return `${minutes} min${minutes > 1 ? 's' : ''} read`;
