@@ -74,16 +74,18 @@ const Footer = () => {
   });
 
   useEffect(() => {
-    // if (process.env.NODE_ENV !== 'production') {
-    //   return;
-    // }
-    fetch('https://api.github.com/repos/gridexx/portofolio')
+    if (process.env.NODE_ENV !== 'production') {
+      return;
+    }
+    fetch('https://api.github.com/repos/GridexX/portofolio')
       .then(response => response.json())
       .then(json => {
         const { stargazers_count, forks_count } = json;
+        const stars = stargazers_count ?? 0;
+        const forks = forks_count ?? 0;
         setGitHubInfo({
-          stars: stargazers_count,
-          forks: forks_count,
+          stars,
+          forks,
         });
       })
       .catch(e => console.error(e));
@@ -113,18 +115,16 @@ const Footer = () => {
             Forked from <a href="https://v4.brittanychiang.com">brittanychiang.com</a>
           </small>
         </div>
-        {!isNaN(githubInfo?.stars ?? 0) && !isNaN(githubInfo?.forks ?? 0) && (
-          <div className="github-stats">
-            <span>
-              <Icon name="Star" />
-              <span>{githubInfo?.stars?.toLocaleString() ?? 0}</span>
-            </span>
-            <span>
-              <Icon name="Fork" />
-              <span>{githubInfo?.forks.toLocaleString() ?? 0}</span>
-            </span>
-          </div>
-        )}
+        <div className="github-stats">
+          <span>
+            <Icon name="Star" />
+            <span>{githubInfo.stars.toLocaleString()}</span>
+          </span>
+          <span>
+            <Icon name="Fork" />
+            <span>{githubInfo.forks.toLocaleString()}</span>
+          </span>
+        </div>
       </StyledCredit>
     </StyledFooter>
   );
