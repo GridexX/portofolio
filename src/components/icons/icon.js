@@ -24,6 +24,7 @@ import IconGo from './go';
 import IconReact from './react';
 import IconKubernetes from './kubernetes';
 import IconShop from './shop';
+import IconGitLab from './gitlab';
 
 const Icon = ({ name }) => {
   switch (name) {
@@ -57,6 +58,8 @@ const Icon = ({ name }) => {
       return <IconFork />;
     case 'GitHub':
       return <IconGitHub />;
+    case 'GitLab':
+      return <IconGitLab />;
     case 'Instagram':
       return <IconInstagram />;
     case 'Linkedin':
