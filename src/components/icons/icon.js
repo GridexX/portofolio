@@ -15,16 +15,19 @@ import {
   IconPlayStore,
   IconStar,
   IconTwitter,
+  IconSparQL,
+  IconTypescript,
+  IconTerraform,
+  IconOpenstack,
+  IconAws,
+  IconGo,
+  IconReact,
+  IconKubernetes,
+  IconGitLab,
+  IconShop,
+  IconLanggraph,
+  IconMCP,
 } from '@components/icons';
-import IconTypescript from './typescript';
-import IconTerraform from './terraform';
-import IconOpenstack from './openstack';
-import IconAws from './aws';
-import IconGo from './go';
-import IconReact from './react';
-import IconKubernetes from './kubernetes';
-import IconShop from './shop';
-import IconGitLab from './gitlab';
 
 const Icon = ({ name }) => {
   switch (name) {
@@ -50,6 +53,12 @@ const Icon = ({ name }) => {
       return <IconReact />;
     case 'Kubernetes':
       return <IconKubernetes />;
+    case 'LangGraph':
+      return <IconLanggraph />;
+    case 'SparQL':
+      return <IconSparQL />;
+    case 'MCP':
+      return <IconMCP />;
     case 'Go':
       return <IconGo />;
     case 'Aws':

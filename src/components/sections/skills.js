@@ -80,6 +80,14 @@ const StyledProject = styled.li`
       }
     }
 
+    .langgraph {
+      color: var(--green);
+      svg {
+        width: 80px;
+        height: 40px;
+      }
+    }
+
   .folder {
     color: var(--green);
     svg {
@@ -100,9 +108,15 @@ const ProjectCard = ({ icon, skill }) => (
   <StyledProject>
     <div className="project-inner">
       <div className="project-top">
-        <div className="folder">
-          <Icon name={icon} />
-        </div>
+        {icon === 'LangGraph' ? (
+          <div className="langgraph">
+            <Icon name={icon} />
+          </div>
+        ) : (
+          <div className="folder">
+            <Icon name={icon} />
+          </div>
+        )}
       </div>
       <h3 className="project-title">{skill}</h3>
     </div>
@@ -128,6 +142,9 @@ const Skills = () => {
         <ProjectCard icon={'Aws'} skill="Aws" />
         <ProjectCard icon={'React'} skill="React" />
         <ProjectCard icon={'Kubernetes'} skill="Kubernetes" />
+        <ProjectCard icon={'LangGraph'} skill="LangGraph" />
+        <ProjectCard icon={'SparQL'} skill="SparQL" />
+        <ProjectCard icon={'MCP'} skill="MCP" />
       </ul>
     </StyledSkillsSection>
   );

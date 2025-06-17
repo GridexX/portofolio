@@ -117,18 +117,23 @@ const Hero = () => {
   const four = (
     <div className="hero-p">
       <p>
-        I'm a DevOps engineer with a passion for architecting robust, scalable, and efficient cloud
-        solutions.
+        I'm a DevOps engineer specializing in cloud-native architectures that seamlessly integrate
+        microservices with multi-agent systems, leveraging cutting-edge technologies to build
+        meaningful AI-driven platforms.
       </p>
       <p>
-        Currently, I'm focused on improving scientific computing infrastructure at{' '}
-        <a href="https://isdm.umontpellier.fr"> Montpellier University</a>, where I'm bridging the
-        gap between cutting-edge research and state-of-the-art cloud technologies.
+        Currently, I'm focused on building Knowledge Graph solutions for{' '}
+        <strong>European projects</strong>, where I leverage my expertise in cloud technologies to
+        create innovative and impactful systems.
       </p>
     </div>
   );
   const five = (
-    <a className="email-link" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+    <a
+      className="email-link"
+      href="/resume-arsene-fougerouse.pdf"
+      target="_blank"
+      rel="noopener noreferrer">
       Check out my Resume!
     </a>
   );
