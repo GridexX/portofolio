@@ -140,17 +140,13 @@ const About = () => {
             </p>
 
             <p>
-              Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="https://isdm.umontpellier.fr/">The University of Montpellier</a>,{' '}
+              Fast-forward to today, and I’ve had the privilege of working as a{' '}
+              <strong>Project Manager</strong> for{' '}
+              <a href="https://lumenproject.eu">The European Commission</a>,{' '}
               <a href="https://r2devops.io/">a start-up</a>,{' '}
               <a href="https://xwiki.com/">a medium-sized company</a>.
             </p>
-            <p>
-              {' '}
-              My main focus these days is building an avant-garde chatbot solution for scientists
-              inclusive at
-              <a href="https://meso-lr.umontpellier.fr/">Meso@LR</a>.
-            </p>
+            <p> My main focus these days is building Agentic AI solutions for the Cloud !</p>
           </div>
           {/* <p>Here are a few technologies I’ve been working with recently:</p>
 
